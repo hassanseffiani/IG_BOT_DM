@@ -9,8 +9,9 @@ lines = open( 'test.csv', "r" )
 _file = open("test2", "w")
 j = 0
 for i in lines:
-    i = i.replace('\n',',')
-    _file.write(i)
+    if (j >= 0):
+        i = i.replace('\n',',')
+        _file.write(i)
     j+=1
     if (j == 20):
         break

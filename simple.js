@@ -42,22 +42,24 @@ async function main() {
 
     for (let index = 0; index < listUsers.length; index++) {
         const l = listUsers[index];
+        console.log(l)
         await page.locator('[aria-label="New Message"]').click();
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(3000);
         const usernameTarget = await page.$('[name="queryBox"]');
         await usernameTarget.type(l, 2000);
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(3100);
         const select = await page.$('[style="cursor: pointer;"]');
         await select.click();
+        await page.waitForTimeout(1000);
         const next = await page.$('"Next"');
         await next.click();
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(3500);
         const msgWrite = await page.$('[placeholder="Message..."]');
         await msgWrite.type(CompletMsg, 2000);
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(3000);
         const sendmsg1 = await page.$('"Send"');
         await sendmsg1.click();
-        await page.waitForTimeout(1000);
+        await page.waitForTimeout(2000);
         // await new Promise(resolve => setTimeout(resolve, 2000));
     }
 }
