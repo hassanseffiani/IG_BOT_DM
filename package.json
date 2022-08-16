@@ -5,7 +5,7 @@
   "main": "simple.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon simple.js"
+    "start": "nodemon zara.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "nodemon": "^2.0.15",
-    "playwright": "^1.19.2"
+    "playwright": "^1.19.2",
+    "scrape": "^0.2.3"
   }
 }
